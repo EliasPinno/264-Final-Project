@@ -1,0 +1,145 @@
+/* Styling used for all text */
+body{
+    background-color: rgb(215, 220, 224);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Main area cleanup*/
+main{
+    display: block;
+    overflow: hidden;
+}
+
+/* Header related styling */
+header{
+    width: 100%;
+    height: 10em;
+    border-bottom: black;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    background-color: rgb(137, 148, 156);
+    margin: 0em;
+}
+header svg{
+    float: left;
+}
+header h1{
+    position: relative;
+    top:25%;
+    left: 5%;
+    color: firebrick;
+    font-size: 4em;
+    margin-top: 0em;
+}
+.links{
+    position: relative;
+    left: 78%;
+    top: 10%;
+}
+
+/* Footer Styling */
+footer{
+    clear: both;
+    text-align: center;
+    width: 100%;
+    font-size: 0.7em;
+    font-weight: 50;
+    border-top-style: solid;
+    border-top-width: 0.2em;
+}
+
+/* Sidebar styling */
+.sidebar{
+    float: left;
+    padding-left: 1em;
+    padding-top: 1em;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+.categorySearch h3{
+    margin-top: 0.5em;
+    text-decoration: underline;
+}
+.categorySearch{
+    margin-top: 1em;
+    border-style: solid;
+    border-color: rgb(83, 101, 115);
+    border-radius: 4em;
+    background-color: whitesmoke;
+}
+
+/* General main area */
+.mainContent{
+    float: right;
+    background-color: rgb(224, 222, 215);
+    width: 75%;
+    height: 100%;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+/* Search result styling */
+.description{
+    overflow: hidden;
+    max-height: 10em;
+    padding-top: 1em;
+}
+.thumbImg{
+    float: left;
+    margin-right: 1em;
+}
+.searchResult{
+    border-top: black;
+    border-top-width: 0.1em;
+    border-top-style: solid;
+    margin-top: 1em;
+}
+/* Product page styling */
+
+/* Get the 3 info area's to line up in a row with borders*/
+.rowElements{
+    display: flex;
+    flex-flow: row wrap;
+}
+.col{
+    padding: 0.5em;
+    flex: 1;
+    border-width: 0.2em;
+    border-color: slategray;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    background-color: rgb(224, 222, 215);
+}
+.imageContainer{
+    position: relative;
+    vertical-align: middle;
+    border-left-style: solid;
+}
+.productImage{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.productDesc{
+    clear: both;
+    text-align: center;
+}
+
+/* Font styling*/
+h1,h2,h3{
+    font-weight: 75;
+    color: rgb(47, 87, 117);
+}
+
+/* Contact page styling */
+#contactSubmit{
+    width: 12.3em;
+}

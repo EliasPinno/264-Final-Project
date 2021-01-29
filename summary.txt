@@ -1,0 +1,47 @@
+Hey, welcome to the summary document. In this document I outline what the role of all files in this project, and what they are used for.
+This should be helpful for you during grading to try and understand what all the doucments do.
+
+.php FILES:
+Main pages (You navigate and open these ones to work the website):
+    index.php - Main page. Shows empty search results initially, and that content is replaced by new search results.
+    Searching can happen from any.php file due to how the javascript is connected to all the file, but index.php is where
+    home redirects you to and is made primarily for performing searches
+    
+    contact.php - The contact us page: Utilizes mostly html built in input cleaning to get data. Also includes a bonus
+    javascript feature to show dynamically how close the user is to running out of characters in the description input
+    Data is sent to processContact.php via a POST command to upload this to a server.
+    
+    processContact.php - Page that shows the POSTED data, and sends it to a database which was locally hosted on my 
+    machine. Credentials may not work, but I don't know how to send database data details you could use.
+    
+    product.php - The dynamically generated product page for each book title. Since not all data can be sent 
+    directly in URL (description is too long), only the ISBN is sent as a get request to product.php, after which
+    a SQL query is done with that ISBN for the relevant book data.
+
+Referenced/Included pages:
+    footer.php - includes the raw HTML of the bottom of all the pages (copyright info)
+    header.php - includes the raw HTML of the header on all pages (svg logo, website title,contact us and home links)
+    sidebar.php - includes the raw HTML of the sidebar (left column of 2 column layout)
+    
+    searchPHP.php - Most complicated and important PHP: PHP backend that generates the asynchronous search results
+    for all pages. Done via get request. Generates all the HTML that is outputted for the search results. Launched from
+    main.js for asynchronous ajax searches.
+
+.js FILES:
+main.js - main javascript file. Has the javascript required for asynchronous searching, searching via clicking on links
+and javascript for the automatically updating time on the sidebar.
+
+contact.js - Includes javascript for the BONUS task of making the message remaining characters in contact.php dynamically
+adjust based on how many more characters the user can type.
+
+jquery-3.4.1.min.js - Jquery code in the event in cannot be found online.
+
+.css FILES:
+index.css - A monster of a css document. Used for all styling on the website since all webpages share many similar
+elements, and one webpage can sort of "become" another via using the search feature at any time. Sorted rougly by
+styles used for each main section, but can be a bit difficult to follow. Creates the multi column layout for the webpage
+
+the sql folder: (Partly Bonus)
+SQL Commands.txt - These were the commands I had to run on my local machine in order to be able to upload the results
+from processContact.php to a localhost server. If these commands are run on myPHP admin database uploading should
+(in theory) work.
